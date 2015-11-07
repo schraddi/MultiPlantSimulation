@@ -25,9 +25,9 @@ if __name__ == '__main__':
     shelfTrolley1 = ShelfTrollley.Shelftrolley(tray1)
 
     shelfTrolley1.shelfs[0].part.getNextPly().placed = True
-    print shelfTrolley1.shelfs[0].part.getNextPly()
-    print
-    print shelfTrolley1.shelfs[19].part.getNextPly()
-    print
-    print shelfTrolley1.shelfs[0] is shelfTrolley1.shelfs[19]
-    print shelfTrolley1.shelfs[0].part is shelfTrolley1.shelfs[19].part
+    print(shelfTrolley1.shelfs[0].part.getNextPly())
+    print()
+    print(shelfTrolley1.shelfs[19].part.getNextPly())
+    print()
+    print(shelfTrolley1.shelfs[0] is shelfTrolley1.shelfs[19])
+    print(shelfTrolley1.shelfs[0].part is shelfTrolley1.shelfs[19].part)
