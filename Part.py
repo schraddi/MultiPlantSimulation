@@ -14,4 +14,4 @@ class Part(object):
 
     def addPly(self, plyList):
         for ply in plyList:
-            self.plys.append(copy.copy(ply))
+            self.plys.append(copy.deepcopy(ply))

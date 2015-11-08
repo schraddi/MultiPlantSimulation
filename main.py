@@ -2,6 +2,7 @@ import Ply
 import Part
 import ShelfTrollley
 import Tray
+import PlacingUnit
 
 if __name__ == '__main__':
 
@@ -21,13 +22,15 @@ if __name__ == '__main__':
     # put part on tray
     tray1 = Tray.Tray(part1)
 
-    # generating a ShelfTrolley
+    # generating a ShelfTrolley with trays on it
     shelfTrolley1 = ShelfTrollley.Shelftrolley(tray1)
 
-    shelfTrolley1.shelfs[0].part.getNextPly().placed = True
-    print(shelfTrolley1.shelfs[0].part.getNextPly())
-    print()
-    print(shelfTrolley1.shelfs[19].part.getNextPly())
-    print()
-    print(shelfTrolley1.shelfs[0] is shelfTrolley1.shelfs[19])
-    print(shelfTrolley1.shelfs[0].part is shelfTrolley1.shelfs[19].part)
+    # generating a ShelfTrolley with no tray on it
+    shelfTrolley1 = ShelfTrollley.Shelftrolley()
+
+    # generating placingUnits
+    placingUnit150 = PlacingUnit.PlacingUnit(150)
+    placingUnit300 = PlacingUnit.PlacingUnit(300)
+    placingUnit600 = PlacingUnit.PlacingUnit(600)
+
+

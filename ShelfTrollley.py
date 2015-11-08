@@ -9,7 +9,7 @@ class Shelftrolley(object):
     def fillShelfs(self, tray):
         if self.empty():
             for shelf in range(self.numberOfShelfs):
-                self.shelfs.append(copy.copy(tray))
+                self.shelfs.append(copy.deepcopy(tray))
 
     def empty(self):
         for tray in self.shelfs:
